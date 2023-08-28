@@ -44,3 +44,69 @@ if (numberComputer > numberPlayer) {
     divChild = 'Congratulazioni, hai battuto il computer';
     divElement.append(divChild);
 }
+
+ /* esercizio mail */
+
+ /* tools */
+ /* 
+ -prompt
+ -array
+ -console.log
+ -append
+ -if/else
+ */
+
+ /* esecuzione gioco mail */
+
+ /* 
+ -creo un array con scritto differenti mail
+ -creo un prompt dove chiedo all' utente la sua mail
+ -verifico con if/else se l' email scritta dall' utente corrisponde a una di quelle scritte nella lista
+ -stampo il risultato in pagina con append
+ */
+ const emailList = ['fabio.pacifici@live.com', 'artur.mamedov@live.it', 'paolo.mistretta@live.com' , 'riky.volto@live.com'];
+ const spanElement = document.querySelector('span');
+ let spanChild = document.createElement('span')
+ spanChild.append;
+
+ document.querySelector('button').addEventListener('click', function () {
+    const userEmail = document.querySelector('input').value;
+    console.log(userEmail);
+    for (let i = 0; i < emailList.length; i++) {
+        const acceptedValues = emailList[i];
+        console.log(acceptedValues);
+        if (userEmail === acceptedValues) {
+            spanChild = 'La tua mail è stata verificata con successo, benvenuto alla festa!'
+            spanElement.append(spanChild);
+            
+            
+        }else {
+            spanElement.append('Mi dispiace, la tua mail non risulta nella lista, riprova con una mail valida')
+            
+        }
+        
+    }
+ 
+    
+})
+
+
+
+
+
+
+
+
+
+
+
+/* for (let i = 0; i < emailList.length; i++) {
+    const acceptedValues = emailList[i];
+    if (acceptedValues === userMail) {
+        console.log('uguale');
+        
+    } else {
+        console.log('diverso');
+    }
+    
+} */
