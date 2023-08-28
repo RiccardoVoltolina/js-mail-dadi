@@ -66,27 +66,32 @@ if (numberComputer > numberPlayer) {
  */
  const emailList = ['fabio.pacifici@live.com', 'artur.mamedov@live.it', 'paolo.mistretta@live.com' , 'riky.volto@live.com'];
  const spanElement = document.querySelector('span');
- let spanChild = document.createElement('span')
+ const userEmail = document.querySelector('input');
+ let spanChild = document.createElement('span');
  spanChild.append;
 
+
  document.querySelector('button').addEventListener('click', function () {
-    const userEmail = document.querySelector('input').value;
-    console.log(userEmail);
-    for (let i = 0; i < emailList.length; i++) {
-        const acceptedValues = emailList[i];
-        console.log(acceptedValues);
-        if (userEmail === acceptedValues) {
-            spanChild = 'La tua mail è stata verificata con successo, benvenuto alla festa!'
-            spanElement.append(spanChild);
-            
-            
-        }else {
-            spanElement.append('Mi dispiace, la tua mail non risulta nella lista, riprova con una mail valida')
-            
-        }
+
+ let trovata = false;
+
+
+
+ for (let i = 0; i < emailList.length; i++) {
+    const email = emailList[i];
+
+    if (userEmail.value === email) {
+        trovata = true
         
     }
- 
+    
+ }
+ if (trovata) {
+    spanChild = 'La tua mail è stata verificata con successo, benvenuto alla festa!'
+    spanElement.append(spanChild);
+ } else {
+    spanElement.append('Mi dispiace, la tua mail non risulta nella lista, riprova con una mail valida')
+ }
     
 })
 
@@ -100,13 +105,26 @@ if (numberComputer > numberPlayer) {
 
 
 
-/* for (let i = 0; i < emailList.length; i++) {
-    const acceptedValues = emailList[i];
-    if (acceptedValues === userMail) {
-        console.log('uguale');
+
+/* 
+    let trovata = false;
+    const userEmail = document.querySelector('input').value;
+    console.log(userEmail);
+    for (let i = 0; i < emailList.length; i++) {
+        const acceptedValues = emailList[i];
+        console.log(acceptedValues);
+        if (userEmail.value === acceptedValues) {
+            trovata = true;
+        }
+       if (trovata) {
+
+            spanChild = 'La tua mail è stata verificata con successo, benvenuto alla festa!'
+            spanElement.append(spanChild);
+            
+        }else {
+            spanElement.append('Mi dispiace, la tua mail non risulta nella lista, riprova con una mail valida')
+        }
         
-    } else {
-        console.log('diverso');
     }
     
 } */
