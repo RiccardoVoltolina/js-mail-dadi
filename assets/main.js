@@ -12,3 +12,35 @@ si ma noi cosa vogliamo fare?
 torniamo a scrivere in italiano
 proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
  */
+
+/* tools */
+
+/* 
+-console.log
+-math.random/ math for
+-if/else
+-for
+-append
+*/
+
+/* esecuzione gioco dadi */
+
+/* 
+-creo una variabile per il computer che ha come valore un numero random compreso tra 1 e 6
+-creo una variabile per il player che ha come valore un numero random compreso tra 1 e 6
+-creo if/ else dove scriverò che il vincitore corrisponde al numero più alto
+*/
+
+const numberComputer = Math.floor(Math.random() * 6) + 1;
+const numberPlayer = Math.floor(Math.random() * 6) + 1;
+const divElement = document.querySelector('div');
+let divChild = document.createElement('div');
+divChild.append;
+console.log(numberComputer , numberPlayer);
+if (numberComputer > numberPlayer) {
+    divChild = 'Mi dispiace ma questa volta ha vinto il computer'
+    divElement.append(divChild);
+} else {
+    divChild = 'Congratulazioni, hai battuto il computer';
+    divElement.append(divChild);
+}
