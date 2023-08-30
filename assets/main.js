@@ -38,11 +38,11 @@ let divChild = document.createElement('div');
 divChild.append;
 console.log(numberComputer , numberPlayer);
 if (numberComputer > numberPlayer) {
-    divChild = 'Mi dispiace ma questa volta ha vinto il computer'
+    divChild = 'Mi dispiace ma questa volta ha vinto il computer';
     divElement.append(divChild);
 } else {
-    divChild = 'Congratulazioni, hai battuto il computer';
-    divElement.append(divChild);
+     divChild = 'Congratulazioni, hai battuto il computer';
+     divElement.append(divChild);
 }
 
  /* esercizio mail */
@@ -70,29 +70,24 @@ if (numberComputer > numberPlayer) {
  let spanChild = document.createElement('span');
  spanChild.append;
 
-
  document.querySelector('button').addEventListener('click', function () {
 
- let trovata = false;
+    let trovata = false;
+    for (let i = 0; i < emailList.length; i++) {
 
+        const email = emailList[i];
 
-
- for (let i = 0; i < emailList.length; i++) {
-    const email = emailList[i];
-
-    if (userEmail.value === email) {
-        trovata = true
+        if (userEmail.value === email) {
+            trovata = true;
+        }
         
     }
-    
- }
- if (trovata) {
-    spanChild = 'La tua mail è stata verificata con successo, benvenuto alla festa!'
-    spanElement.append(spanChild);
- } else {
-    spanElement.append('Mi dispiace, la tua mail non risulta nella lista, riprova con una mail valida')
- }
-    
+    if (trovata) {
+        spanChild = 'La tua mail è stata verificata con successo, benvenuto alla festa!';
+        spanElement.append(spanChild);
+    } else {
+        spanElement.append('Mi dispiace, la tua mail non risulta nella lista, riprova con una mail valida');
+    }
 })
 
 
